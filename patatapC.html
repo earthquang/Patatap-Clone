@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Patatap Clone</title>
+	<script type="text/javascript" src="lib/paper-full.js"></script>
+	<script type="text/javascript" src="lib/howler.js"></script>
+	<link rel="stylesheet" type="text/css" href="patatapC.css">
+	<script type="text/paperscript" canvas="myCanvas">
+
+		var sound1 = new Howl({
+			src: ['sounds/bubbles.mp3']
+		});
+		var sound2 = new Howl({
+			src: ['sounds/clay.mp3']
+		});
+		var sound3 = new Howl({
+				src: ['sounds/confetti.mp3']
+		});
+		var sound4 = new Howl({
+			src: ['sounds/corona.mp3']
+		});
+		var sound5 = new Howl({
+			src: ['sounds/dotted-spiral.mp3']
+		});
+		var sound6 = new Howl({
+			src: ['sounds/flash-1.mp3']
+		});
+		var sound7 = new Howl({
+			src: ['sounds/flash-2.mp3']
+		});
+		var sound8 = new Howl({
+			src: ['sounds/flash-3.mp3']
+		});
+		var sound9 = new Howl({
+			src: ['sounds/glimmer.mp3']
+		});
+		var sound10 = new Howl({
+			src: ['sounds/moon.mp3']
+		});
+		var sound11 = new Howl({
+			src: ['sounds/pinwheel.mp3']
+		});
+		var sound12 = new Howl({
+			src: ['sounds/piston-1.mp3']
+		});
+		var sound13 = new Howl({
+			src: ['sounds/piston-2.mp3']
+		});
+		var sound14 = new Howl({
+			src: ['sounds/piston-3.mp3']
+		});
+		var sound15 = new Howl({
+			src: ['sounds/prism-1.mp3']
+		});
+		var sound16 = new Howl({
+			src: ['sounds/prism-2.mp3']
+		});
+		var sound17 = new Howl({
+			src: ['sounds/prism-3.mp3']
+		});
+		var sound18 = new Howl({
+			src: ['sounds/splits.mp3']
+		});
+		var sound19 = new Howl({
+			src: ['sounds/squiggle.mp3']
+		});
+		var sound20 = new Howl({
+			src: ['sounds/strike.mp3']
+		});
+		var sound21 = new Howl({
+			src: ['sounds/suspension.mp3']
+		});
+		var sound22 = new Howl({
+			src: ['sounds/timer.mp3']
+		});
+		var sound23 = new Howl({
+			src: ['sounds/ufo.mp3']
+		});
+		var sound24 = new Howl({
+			src: ['sounds/veil.mp3']
+		});
+		var sound25 = new Howl({
+			src: ['sounds/wipe.mp3']
+		});
+		var sound26 = new Howl({
+			src: ['sounds/zig-zag.mp3']
+		});
+	
+
+	var newCircles = [];
+	
+	function onKeyDown(event) {
+			var canvasBoundary = new Point (view.size.width, view.size.height);
+			var randomPoint = Point.random();
+			var points = canvasBoundary * Point.random();
+		if (event.key === "a") {
+			var circle1 = new Path.Circle(points, 1000);
+			circle1.fillColor = "steelblue";
+			newCircles.push(circle1);
+			sound1.play();
+		}
+		if (event.key === "b") {
+			var circle2 = new Path.Circle(points, 800);
+			circle2.fillColor = "#4BB446";
+			newCircles.push(circle2);
+			sound2.play();
+		} 
+		if (event.key === "c") {
+			var circle3 = new Path.Circle(points, 600);
+			circle3.fillColor = "#AF46B4";
+			newCircles.push(circle3);
+			sound3.play();
+		}
+		if (event.key === "d") {
+			var circle4 = new Path.Circle(points, 500);
+			circle4.fillColor = "#B47846";
+			newCircles.push(circle4);
+			sound4.play();
+		}
+		if (event.key === "e") {
+			var circle5 = new Path.Circle(points, 400);
+			circle5.fillColor = "#7DB5E3";
+			newCircles.push(circle5);
+			sound5.play();
+		}
+		if (event.key === "f") {
+			var circle6 = new Path.Circle(points, 300);
+			circle6.fillColor = "#E3AB7D";
+			newCircles.push(circle6);
+			sound6.play();
+		}
+		if (event.key === "g") {
+			var circle7 = new Path.Circle(points, 200);
+			circle7.fillColor = "#DE7DE3";
+			newCircles.push(circle7);
+			sound7.play();
+		}
+		if (event.key === "h") {
+			var circle8 = new Path.Circle(points, 100);
+			circle8.fillColor = "#82E37D";
+			newCircles.push(circle8);
+			sound8.play();
+		}
+		if (event.key === "i") {
+			var circle9 = new Path.Circle(points, 50);
+			circle9.fillColor = "#CF5B9C";
+			newCircles.push(circle9);
+			sound9.play();
+		}
+		if (event.key === "j") {
+			var circle9 = new Path.Circle(points, 1000);
+			circle9.fillColor = "#aa37a3";
+			newCircles.push(circle9);
+			sound10.play();
+		}
+		if (event.key === "k") {
+			var circle1 = new Path.Circle(points, 800);
+			circle1.fillColor = "#2caf01";
+			newCircles.push(circle1);
+			sound11.play();
+		}
+		if (event.key === "l") {
+			var circle2 = new Path.Circle(points, 600);
+			circle2.fillColor = "#5e8843";
+			newCircles.push(circle2);
+			sound12.play();
+		} 
+		if (event.key === "m") {
+			var circle3 = new Path.Circle(points, 500);
+			circle3.fillColor = "#7680d0";
+			newCircles.push(circle3);
+			sound13.play();
+		}
+		if (event.key === "n") {
+			var circle4 = new Path.Circle(points, 400);
+			circle4.fillColor = "#4853a0";
+			newCircles.push(circle4);
+			sound14.play();
+		}
+		if (event.key === "o") {
+			var circle5 = new Path.Circle(points, 300);
+			circle5.fillColor = "#89994d";
+			newCircles.push(circle5);
+			sound15.play();
+		}
+		if (event.key === "p") {
+			var circle6 = new Path.Circle(points, 200);
+			circle6.fillColor = "#2bf3fc";
+			newCircles.push(circle6);
+			sound16.play();
+		}
+		if (event.key === "q") {
+			var circle7 = new Path.Circle(points, 100);
+			circle7.fillColor = "#d4e28a";
+			newCircles.push(circle7);
+			sound17.play();
+		}
+		if (event.key === "r") {
+			var circle8 = new Path.Circle(points, 50);
+			circle8.fillColor = "#3fe809";
+			newCircles.push(circle8);
+			sound18.play();
+		}
+		if (event.key === "s") {
+			var circle9 = new Path.Circle(points, 1000);
+			circle9.fillColor = "#8f9944";
+			newCircles.push(circle9);
+			sound19.play();
+		}
+		if (event.key === "t") {
+			var circle9 = new Path.Circle(points, 800);
+			circle9.fillColor = "#02d2aa";
+			newCircles.push(circle9);
+			sound20.play();
+		}	
+		if (event.key === "u") {
+			var circle9 = new Path.Circle(points, 600);
+			circle9.fillColor = "#54917b";
+			newCircles.push(circle9);
+			sound21.play();
+		}
+		if (event.key === "v") {
+			var circle9 = new Path.Circle(points, 500);
+			circle9.fillColor = "#cef812";
+			newCircles.push(circle9);
+			sound22.play();
+		}
+		if (event.key === "w") {
+			var circle9 = new Path.Circle(points, 400);
+			circle9.fillColor = "#9aa499";
+			newCircles.push(circle9);
+			sound23.play();
+		}	
+		if (event.key === "x") {
+			var circle9 = new Path.Circle(points, 300);
+			circle9.fillColor = "#8a1e08";
+			newCircles.push(circle9);
+			sound24.play();
+		}
+		if (event.key === "y") {
+			var circle9 = new Path.Circle(points, 200);
+			circle9.fillColor = "#ccd067";
+			newCircles.push(circle9);
+			sound25.play();
+		}	
+		if (event.key === "z") {
+			var circle9 = new Path.Circle(points, 100);
+			circle9.fillColor = "#07bd58";
+			newCircles.push(circle9);
+			sound26.play();
+		}
+	}
+
+	function onFrame(event) {
+		for (var i = 0; i < newCircles.length; i++) {
+			if (i % 2 === 0) {
+				newCircles[i].fillColor.hue += 1;
+				newCircles[i].scale(.9);
+			}
+			else {
+				newCircles[i].fillColor.hue -= 1;
+				newCircles[i].scale(.9);
+			}
+		}
+	}
+
+	
+
+	</script>
+</head>
+<body>
+	<canvas id="myCanvas"></canvas>
+</body>
+</html>
